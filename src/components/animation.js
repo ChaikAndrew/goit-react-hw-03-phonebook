@@ -1,32 +1,6 @@
 // 'use strict';
 var app = {
   chars: [
-    'a',
-    'b',
-    'c',
-    'd',
-    'e',
-    'f',
-    'g',
-    'h',
-    'i',
-    'j',
-    'k',
-    'l',
-    'm',
-    'n',
-    'o',
-    'p',
-    'q',
-    'r',
-    's',
-    't',
-    'u',
-    'v',
-    'w',
-    'x',
-    'y',
-    'z',
     '0',
     '1',
     '2',
@@ -37,12 +11,23 @@ var app = {
     '7',
     '8',
     '9',
+    'Andrii',
+    'Oleksandr',
+    'Valeria',
+    'Pasha',
+    'Daria',
+    'Victoria',
+    'Alex',
+    'Vitaliy',
+    'Volodymyr',
+    'Oleksii',
   ],
 
   init: function () {
     app.container = document.createElement('div');
     app.container.className = 'animation-container';
     document.body.appendChild(app.container);
+    /*інтервал між літерами (іменами)*/
     window.setInterval(app.add, 100);
   },
 
@@ -54,7 +39,8 @@ var app = {
 
   animate: function (element) {
     var character = app.chars[Math.floor(Math.random() * app.chars.length)];
-    var duration = Math.floor(Math.random() * 15) + 1;
+
+    var duration = Math.floor(Math.random() * 10) + 1;
     var offset = Math.floor(Math.random() * (35 - duration * 2)) + 3;
     var size = 5 + (15 - duration);
     element.style.cssText =

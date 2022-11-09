@@ -46,11 +46,10 @@ p {
 
 .animation-container span {
   position: absolute;
-  color: whitesmoke;
+  color: rgba(245, 245, 245, 0.174);
   display: block;
   font-size: 18px;
   font-family: 'Helvetica';
-  /* text-shadow: 0 0 1px white; */
   user-select: none;
   pointer-events: none;
   cursor: default;
@@ -58,7 +57,7 @@ p {
   opacity: 0;
   top: 0;
   will-change: transform, opacity;
-  animation-timing-function: ease-out;
+  animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
   animation-name: move;
 }
 
@@ -74,7 +73,7 @@ p {
     opacity: 1;
   }
   75% {
-    opacity: 0;
+    opacity: 1;
   }
   100% {
     opacity: 0;
