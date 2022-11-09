@@ -1,0 +1,38 @@
+.Phonebook__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border-radius: 15px;
+
+  width: 500px;
+  height: auto;
+
+  background-color: #e6f6fff9;
+
+  -webkit-box-shadow: 3px 4px 6px 0px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 3px 4px 6px 0px rgba(66, 68, 90, 1);
+  box-shadow: 3px 4px 6px 0px rgba(66, 68, 90, 1);
+}
+
+.Phonebook__title {
+  width: 100%;
+  height: 60px;
+  padding-top: 20px;
+
+  font-family: Nunito;
+  font-size: 45px;
+  text-align: center;
+  color: white;
+  background-color: #00a2fff9;
+
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.Contacts__sum {
+  margin: 10px 0;
+}

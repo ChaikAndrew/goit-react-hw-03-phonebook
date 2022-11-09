@@ -1,0 +1,57 @@
+.PhoneBookList__list {
+  font-family: Nunito;
+  width: 450px;
+}
+
+.PhoneBookList__item {
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  /* justify-content: space-between; */
+
+  height: 40px;
+}
+
+.PhoneBookList__btn {
+  font-family: Nunito;
+  font-size: 15px;
+  text-align: center;
+  width: 45px;
+  height: 25px;
+  cursor: pointer;
+
+  border: none;
+  border-radius: 5px;
+
+  background-color: rgb(202, 235, 255);
+}
+.PhoneBookList__btn:focus,
+.PhoneBookList__btn:hover {
+  background-color: #00a2fff9;
+  color: white;
+
+  -webkit-box-shadow: 3px 4px 6px -4px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 3px 4px 6px -4px rgba(66, 68, 90, 1);
+  box-shadow: 3px 4px 6px -4px rgba(66, 68, 90, 1);
+}
+
+.PhoneBookList__item:not(:last-child) {
+  border-bottom: 1px solid rgb(196, 196, 196);
+}
+
+.Form__icon {
+  width: 30px;
+  height: 20px;
+}
+
+.Contacts__name {
+  width: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.Contacts__phone {
+  width: 190px;
+  display: flex;
+  align-items: center;
+}
