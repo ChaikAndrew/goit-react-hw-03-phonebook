@@ -22,16 +22,15 @@ class PhoneBookEditor extends Component {
     const nameValue = name.trim();
     const numberValue = number.trim();
     this.props.onSubmit(nameValue, numberValue);
-    this.setState({ name: ' ', number: ' ' });
+    e.currentTarget.reset();
   };
 
   render() {
     return (
       <form onSubmit={this.handleSubmit} className={s.PhoneBook__form}>
-        <p className={s.Name__editor}>Name </p>
+        <p className={s.Name__editor}>Name</p>
         <input
           className={s.Form__input}
-          value={this.state.name}
           onChange={this.handleChangeName}
           placeholder="Andrii Chaika"
           required
@@ -39,7 +38,6 @@ class PhoneBookEditor extends Component {
         <p className={s.Namber__editor}>Number</p>
         <input
           className={s.Form__input}
-          value={this.state.number}
           onChange={this.handleChangeNumber}
           type="tel"
           name="number"
