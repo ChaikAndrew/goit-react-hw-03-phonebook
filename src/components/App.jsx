@@ -9,6 +9,7 @@ import s from './Container.module.css';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { customToast } from './helper';
+import animation from './animation';
 
 class App extends Component {
   state = {
@@ -62,6 +63,9 @@ class App extends Component {
     this.setState({ filter: e.currentTarget.value });
   };
 
+  animation() {
+    console.log(animation);
+  }
   /*монтуємо компонент*/
   componentDidMount() {
     // console.log('App componentDidMount');
