@@ -23,9 +23,9 @@ const PhoneBookList = ({ contacts, ondeletePhoneBook }) => (
             data-tip="Do you want to delete this contact?"
             onClick={() => ondeletePhoneBook(id)}
             className={s.PhoneBookList__btn}
+            aria-label="delete contact"
           >
             <ReactTooltip textColor="white" backgroundColor="#ff3333" />
-            {/* Delete */}
             <RiDeleteBin5Line className={s.Form__icon} />
           </button>
         </div>
