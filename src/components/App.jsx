@@ -1,22 +1,33 @@
 import React, { Component } from 'react';
-import shortid from 'shortid';
 import PhoneBookList from './Phonebook/PhoneBookList/PhoneBookList';
 import PhoneBookEditor from './Phonebook/PhoneBookEditor/PhoneBookEditor';
 import Filter from './Phonebook/PhoneBookFilter/PhoneBookFilter';
-// import contactsList from 'components/contactsList.json';
-import s from './Container.module.css';
-
+import shortid from 'shortid';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { customToast } from './helper';
+import s from './Container.module.css';
 import animation from './animation';
+import { customToast } from './helper';
 
 class App extends Component {
   state = {
     contacts: [],
-    // contacts: contactsList,
     filter: '',
   };
+
+  componentDidMount() {
+    const contacts = localStorage.getItem('contacts');
+    const parsedContacts = JSON.parse(contacts);
+    if (parsedContacts) {
+      this.setState({ contacts: parsedContacts });
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.contacts !== prevState.contacts) {
+      localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+    }
+  }
 
   addContact = (name, number) => {
     const findName = this.state.contacts.find(contact => contact.name === name);
@@ -65,27 +76,6 @@ class App extends Component {
 
   animation() {
     console.log(animation);
-  }
-  /*монтуємо компонент*/
-  componentDidMount() {
-    // console.log('App componentDidMount');
-
-    const contacts = localStorage.getItem('contacts');
-    const parsedContacts = JSON.parse(contacts);
-    if (parsedContacts) {
-      this.setState({ contacts: parsedContacts });
-    }
-    // console.log('parsedContacts', parsedContacts);
-    // console.log(parsedContacts);
-  }
-  /*компонент обновився*/
-  componentDidUpdate(prevProps, prevState) {
-    // console.log('App componentDidUpdate');
-
-    if (this.state.contacts !== prevState.contacts) {
-      // console.log('Обновилось поле контактів, додаємо до localStorage')
-      localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
-    }
   }
 
   render() {

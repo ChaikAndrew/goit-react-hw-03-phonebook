@@ -15,7 +15,7 @@
   font-family: Nunito;
   font-size: 15px;
   margin: 10px 0;
-  width: 150px;
+  width: 100px;
   height: 25px;
   cursor: pointer;
   border: none;
@@ -42,10 +42,12 @@
   border-radius: 5px;
 }
 
-.Name__editor {
-  margin: 5px 0;
-}
-
+.Name__editor,
 .Namber__editor {
   margin: 5px 0;
+  font-size: 17px;
 }
+
+/* .Namber__editor {
+  margin: 5px 0;
+} */
